@@ -1,0 +1,370 @@
+{
+    "name": "Seque",
+    "description": "Polyphonic 8 step MIDI sequencer with individual pitch & speed, melodic scale presets, and global tempo, transpose and rythm randomisation controls.",
+    "type": "EN16",
+    "isGridProfile": true,
+    "version": {
+        "major": "1",
+        "minor": "2",
+        "patch": "31"
+    },
+    "configs": [
+        {
+            "controlElementNumber": 0,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,0,100,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(0,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(0,2,255)else gms(4,144,self.lastNote,0)glp(0,2,0)end else if(self.counter+1)==1 then glp(0,2,30)else glp(0,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 1,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,0,100,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(1,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(1,2,255)else gms(4,144,self.lastNote,0)glp(1,2,0)end else if(self.counter+1)==1 then glp(1,2,30)else glp(1,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 2,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,0,100,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(2,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(2,2,255)else gms(4,144,self.lastNote,0)glp(2,2,0)end else if(self.counter+1)==1 then glp(2,2,30)else glp(2,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 3,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,0,100,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(3,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(3,2,255)else gms(4,144,self.lastNote,0)glp(3,2,0)end else if(self.counter+1)==1 then glp(3,2,30)else glp(3,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 4,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(4,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(4,2,255)else gms(4,144,self.lastNote,0)glp(4,2,0)end else if(self.counter+1)==1 then glp(4,2,30)else glp(4,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 5,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(5,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(5,2,255)else gms(4,144,self.lastNote,0)glp(5,2,0)end else if(self.counter+1)==1 then glp(5,2,30)else glp(5,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 6,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(6,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(6,2,255)else gms(4,144,self.lastNote,0)glp(6,2,0)end else if(self.counter+1)==1 then glp(6,2,30)else glp(6,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 7,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.note,self.lastNote,self.divisions=-1,60,60,16;glc(num,2,255,0,0,0)glc(num,1,255,0,0,0)glp(num,2,0)glp(num,1,20)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@glc]] glc(num,2,255,255,255,0)--[[@el]] else--[[@glc]] glc(num,1,255,0,0,0)--[[@glc]] glc(num,2,255,0,0,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(7,250-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 then if(self.counter+1)==1 then self.lastNote=self.note;gms(4,144,self.lastNote,127)glp(7,2,255)else gms(4,144,self.lastNote,0)glp(7,2,0)end else if(self.counter+1)==1 then glp(7,2,30)else glp(7,2,0)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 8,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@sbc]] self:bmo(0)--[[@glc]] glc(num,2,red,gre,blu)--[[@glc]] glc(num,1,0,100,255,0)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@el]] else--[[@glc]] glc(num,1,0,100,255,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] if(self:bst()==0 and self:est()<64)then ele[0].note=ele[0].note-1 elseif(self:bst()==0 and self:est()>63)then ele[0].note=ele[0].note+1 elseif(self:bst()>0 and self:est()<64)then ele[4].note=ele[4].note-1 else ele[4].note=ele[4].note+1 end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 9,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@glc]] glc(num,1,100,100,255,0)--[[@glc]] glc(num,2,red,gre,blu)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@el]] else--[[@glc]] glc(num,1,0,100,255,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] if(self:bst()==0 and self:est()<64)then ele[1].note=ele[1].note-1 elseif(self:bst()==0 and self:est()>63)then ele[1].note=ele[1].note+1 elseif(self:bst()>0 and self:est()<64)then ele[5].note=ele[5].note-1 else ele[5].note=ele[5].note+1 end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 10,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@glc]] glc(num,1,100,100,255,0)--[[@glc]] glc(num,2,red,gre,blu)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@el]] else--[[@glc]] glc(num,1,0,100,255,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] if(self:bst()==0 and self:est()<64)then ele[2].note=ele[2].note-1 elseif(self:bst()==0 and self:est()>63)then ele[2].note=ele[2].note+1 elseif(self:bst()>0 and self:est()<64)then ele[6].note=ele[6].note-1 else ele[6].note=ele[6].note+1 end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 11,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@glc]] glc(num,1,100,100,255,0)--[[@glc]] glc(num,2,red,gre,blu)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() > 0 then--[[@glc]] glc(num,1,255,0,255,0)--[[@el]] else--[[@glc]] glc(num,1,0,100,255,0)--[[@en]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] if(self:bst()==0 and self:est()<64)then ele[3].note=ele[3].note-1 elseif(self:bst()==0 and self:est()>63)then ele[3].note=ele[3].note+1 elseif(self:bst()>0 and self:est()<64)then ele[7].note=ele[7].note-1 else ele[7].note=ele[7].note+1 end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 12,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] self:bva(0)self:eva(0)self:ema(6)currentScale=ele[12]:eva()+1;scales={{0,2,4,5,7,9,11,12},{0,2,3,5,7,9,10,12},{0,1,3,5,7,8,10,12},{0,2,4,6,7,9,11,12},{0,2,4,5,7,9,10,12},{0,2,3,5,7,8,10,12},{0,1,3,5,6,8,10,12}},glc(12,1,255,0,0)glc(12,2,255,0,0)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@bpr]] if self:bst()>0 then--[[@cb]] for i=8,1,-1 do i=i-1;ele[i].note=rootNote+scales[self:eva()+1][i+1]print(rootNote+scales[self:eva()+1][i+1])end--[[@bprel]] else--[[@bpre]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@cb]] print(self:eva())colours={{255,0,0},{255,127,0},{255,255,0},{0,255,0},{0,0,255},{75,0,130},{148,0,211}}glc(12,1,colours[self:eva()+1][1],colours[self:eva()+1][2],colours[self:eva()+1][3])glc(12,2,colours[self:eva()+1][1],colours[self:eva()+1][2],colours[self:eva()+1][3]) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]]  ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 13,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@cb]] noScale={0,0,0,0,0,0,0,0}--[[@glc]] glc(num,1,red,gre,blu)--[[@glc]] glc(num,2,red,gre,blu)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,note=self:ind(),(32+gmx()*16+self:ind())%128--[[@bpr]] if self:bst()>0 then--[[@cb]] for i=8,1,-1 do i=i-1;ele[i].note=rootNote end--[[@bprel]] else--[[@bpre]] end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@elr]] if self:est()<64 then--[[@cb]] rootNote=rootNote-1--[[@elrel]] else--[[@cb]] rootNote=rootNote+1--[[@elre]] end--[[@glp]] glp(num,2,val) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 14,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] local num,bval,eval,red,gre,blu=self:ind(),self:bva()*12,self:eva(),0,glg(),255;self:bmo(1)self:eva(16)self:emi(2)self:ema(64)self:bva(0)self.counter,self.divisions=-1,16;glp(num,1,0)glp(num,2,0)glc(num,1,255,0,255)glc(num,2,255,0,255)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@cb]] if self:bva()>0 then glp(num,2,100)else glp(num,2,0)end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@cb]] local num,ch,cc=self:ind(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128 self.divisions=self:eva() ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] gtt(14,125-ele[15]:eva())self.counter=(self.counter+1)%((self.divisions))if self:bva()>0 and(self.counter+1)==1 then glp(14,2,200)glc(14,2,grnd()%255,grnd()%255,grnd()%255)glc(14,1,grnd()%255,grnd()%255,grnd()%255)for i=8,1,-1 do i=i-1;ele[i].divisions=((grnd()%30)+2)end end ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 15,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] self.counter=-1;local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),255,255,0;self:bmo(1)glc(num,1,255,127,0)glc(num,2,255,127,0)glp(num,1,0)glp(num,2,0)--[[@cb]] self.init = nil ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@cb]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128;if self:bst()>0 then gtt(15,3000)else resetDivs=0;gtp(15)glc(num,2,255,127,0)glp(15,2,0)if self:bva()>0 then gtt(16,1)else gtp(16)globalCounter=-1;for i=8,1,-1 do i=i-1;gtp(i)ele[i].counter=-1;gms(4,144,ele[i].note,0)glp(i,2,0)end;gtp(14)glp(14,2,0)glp(15,2,0)end end ?>"
+                },
+                {
+                    "event": "2",
+                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] self.counter=(self.counter+1)%2;gtt(15,100)if(self.counter+1)==1 then glc(15,2,255,0,100)glp(15,2,255)else glc(15,1,255,127,0)glp(15,2,0)end;resetDivs=1;print('end of timer') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 255,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@cb]] rootNote=60;resetDivs=0;globalCounter=-1 ?>"
+                },
+                {
+                    "event": "4",
+                    "config": "<?lua --[[@cb]] gpl(gpn()) ?>"
+                },
+                {
+                    "event": "5",
+                    "config": "<?lua --[[@l]] local ch,cmd,param1,param2=midi.ch,midi.cmd,midi.p1,midi.p2 ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] globalCounter=(globalCounter+1)%8;gtt(16,250-ele[15]:eva())if(globalCounter+1)==1 then for i=8,1,-1 do i=i-1;gtt(i,1)end;gtt(14,1)end;if(globalCounter+1)%2==1 then glp(15,2,200)else glp(15,2,0)end ?>"
+                }
+            ]
+        }
+    ]
+}
