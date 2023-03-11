@@ -35,7 +35,7 @@ Just drop the included json file in your user folder (../grid-userdata/profiles/
 ### Encoder 12 (Bottom Left): Scale / Mode Selector
 
 - Rotate Left / Right
-  - Move through Mode selector. Current Options are:
+  - Move through the Mode selector. Current options are:
     1. Ionian (I) 🔴
     2. Dorian (ii) 🟠
     3. Phrygian (iii) 🟡
