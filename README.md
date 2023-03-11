@@ -58,7 +58,7 @@ Just drop the included json file in your user folder (../grid-userdata/profiles/
 - Button
   - 'Zero out' all notes to current selected root note.
 
-### Encoder 14 : Random Rythm Generator
+### Encoder 14 : Random Rhythm Generator
 
 - Rotate Left / Right
   - Increase / Decrease speed of new random step / note frequency set.
