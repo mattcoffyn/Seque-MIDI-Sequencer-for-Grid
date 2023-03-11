@@ -2,7 +2,7 @@
 
 Seque is a polyphonic, 8-step sequencer profile for the Grid EN16 MIDI controller from Intech Studio. Uses multiple counters / timers triggered by a global timer in the system events to send up to 8 MIDI notes at independent intervals. WIP but contributions / forks are welcome!
 
-For more info on Intech Studio
+For more info on Intech Studio check out their website (https://intech.studio) or GitHub page (https://github.com/intechstudio)
 
 ## Installation
 
