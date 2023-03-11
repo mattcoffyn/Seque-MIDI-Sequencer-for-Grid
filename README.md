@@ -6,7 +6,7 @@ For more info on Intech Studio
 
 ## Installation
 
-Just drop the included json file in your user folder (Documents/grid-userdata/profiles/user) and load it onto your EN16 module in the Grid Editor.
+Just drop the included json file in your user folder (../grid-userdata/profiles/user) and load it onto your EN16 module in the Grid Editor.
 
 ## Usage
 
