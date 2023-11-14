@@ -9,7 +9,8 @@ Seque is a polyphonic, 8-step sequencer profile for the Grid EN16 MIDI controlle
 - Button 13 now transposes current scale to selected root note, instead of setting all notes to unison.
 - LED 13 set to high when new note selected but not yet set.
 - Minor tweaks to timings and divisions.
-  
+
+/
 
 ## Video Demo
 
