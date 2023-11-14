@@ -25,6 +25,8 @@ Check out a demo video here: https://youtu.be/R2ARM8JjvY8
 
 Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or via the link: grid-editor://?config-link=V67kSzIxCPu7xmDfVS1g
 
+<br/>
+
 ## Usage
 
 ### Encoders 0 — 7 (Top Two Rows): Individual Step Controllers
@@ -97,6 +99,8 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
   - Resets counter to zero but does not clear current steps and / or note pitches.
 - LED
   - Tempo Indicator
+ 
+<br/>
 
 ## Contributing
 
@@ -104,6 +108,8 @@ Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+<br/>
 
 ## License
 
