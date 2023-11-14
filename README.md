@@ -11,6 +11,7 @@ Seque is a polyphonic, 8-step sequencer profile for the Grid EN16 MIDI controlle
 - Minor tweaks to timings and divisions.
 
 
+
 ## Video Demo
 
 Check out a demo video here: https://youtu.be/R2ARM8JjvY8
