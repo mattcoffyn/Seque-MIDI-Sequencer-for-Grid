@@ -88,7 +88,7 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
   - Select root note of scale.
   - Default is currently C3
 - Button
-  - Transpose current scale or step notes to new root note (Encoder 0 is always considered the root).
+  - Transpose current scale or step notes to new root note (encoder 0 is always considered the root).
 - LED
   - High LED indicates new root not selected but not yet applied.   
 
