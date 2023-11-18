@@ -6,6 +6,8 @@ Each channel can be individually set to trigger on a range from 1 (every beat) t
 
 MIDI notes can be set manually or using the scale / mode function. The tranpose function can shift the root note of your pattern.
 
+Also features global start/stop and tempo control.
+
 ## Updates
 
 ### v1.3
