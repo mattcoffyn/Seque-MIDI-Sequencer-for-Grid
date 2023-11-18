@@ -78,7 +78,7 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
     7. Locrian (viiø) 🟣
 - Button
   - Apply selected scale to all note steps. Applies the scale from root (encoder 0) to octave (encoder 7).
-  - Is based on current Root Note (Encoder 13).
+  - Is based on current Root Note (encoder 13).
 - LED
   - Displays mode options (see colours above).
 
@@ -95,7 +95,7 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
 ### Encoder 14 : Random Rhythm Generator
 
 - Rotate Left / Right
-  - Increase / Decrease speed of new random step / note frequency set.
+  - Increase / Decrease speed of new random step sequence frequency.
 - Button
   - Toggle On / Off.
   - Off by default.
@@ -109,7 +109,7 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
 - Rotate Left / Right
   - Increase / Decrease global tempo.
 - Button
-  - Toggle Start / Stop of sequencer.
+  - Global start/stop toggle.
   - Resets counter to zero but does not clear current steps and / or note pitches.
 - LED
   - Tempo Indicator
