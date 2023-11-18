@@ -1,6 +1,10 @@
 # Seque
 
-Seque is a polyphonic, 8-step sequencer profile for the Grid EN16 MIDI controller from Intech Studio. Uses multiple counters / timers triggered by a global timer in the system events to send up to 8 MIDI notes at independent intervals. 
+Seque is a polyphonic, 8 channel sequencer profile for the Grid EN16 MIDI controller from Intech Studio. Uses multiple counters/timers triggered by a global timer in the system events to send up to 8 MIDI notes at independent intervals. 
+
+Each channel can be individually set to trigger on a range from 1 (every beat) to 64 (every 64th beat), allowing the creation of complex polyrhythms and euclidean-like sequences. The random sequence generator cycles through new patterns at user-controlled intervals to provide exploration of rhythms from predictable to chaotic.
+
+MIDI notes can be set manually or using the scale / mode function. The tranpose function can shift the root note of your pattern.
 
 ## Updates
 
@@ -74,7 +78,7 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
   - Select root note of scale.
   - Default is currently C3
 - Button
-  - Transpose current scale or step notes to new root note.
+  - Transpose current scale or step notes to new root note (Encoder 0 is always considered the root).
 - LED
   - High LED indicates new root not selected but not yet applied.   
 
@@ -104,10 +108,8 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first
+Pull requests/comments are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 <br/>
 
