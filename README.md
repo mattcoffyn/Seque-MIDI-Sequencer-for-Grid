@@ -11,7 +11,7 @@ Also features global start/stop and tempo control.
 ## Updates
 
 ### v1.3
-- Builds on the rework by intechstudio which brought enhanced performance and profile size, especially for older modules.
+- Builds on the rework by [@intechstudio](https://github.com/intechstudio) which brought enhanced performance and profile size, especially for older modules.
 - Button 13 now transposes current scale to selected root note, instead of setting all notes to unison.
 - LED 13 set to high when new note selected but not yet set.
 - Minor tweaks to timings and divisions.
