@@ -61,7 +61,6 @@ Updated for Grid Profile Cloud. Grab it from the Profile Cloud in Grid Editor or
   - Decrease / Increase pitch of MIDI note for encoders 0 — 3 respectively.
 - Push & Rotate Left / Right
   - Decrease / Increase pitch of MIDI note for encoders 4 — 7 respectively.
-  - Pitch changes are incremented by 1 (one semitone)
 - LED
   - Blue == Controlling pitch of encoder two rows above.
   - Purple == Controlling pitch of encoder one row above.
