@@ -20,10 +20,19 @@ Also features global start/stop and tempo control.
 
 ## Video Demo
 
-Check out a demo video here: https://youtu.be/R2ARM8JjvY8
+Check out the demo videos: 
 
-[![](https://markdown-videos.deta.dev/youtube/R2ARM8JjvY8)](https://youtu.be/R2ARM8JjvY8)
+https://youtu.be/R2ARM8JjvY8
 
+[![Video walkthrough of Seque](https://img.youtube.com/vi/R2ARM8JjvY8/hqdefault.jpg)](https://youtu.be/R2ARM8JjvY8 "Seque - MIDI Sequencer for Intech Studio Grid EN16 [DEMO]")
+
+<br/>
+
+https://youtu.be/CQ8Bw83kB-8
+
+[![Video showing the Seque update in action](https://img.youtube.com/vi/CQ8Bw83kB-8/hqdefault.jpg)](https://youtu.be/CQ8Bw83kB-8 "Seque v1.3")
+
+<br/>
 
 ## Installation
 
